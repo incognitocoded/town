@@ -1,7 +1,7 @@
 -- [[ LOST HUB LOADER V1 ]] --
 -- [[ TG/@losthubscript ]] --
 
-local raw_url = "ВСТАВЬ_СЮДА_RAW_ССЫЛКУ" 
+local raw_url = "https://raw.githubusercontent.com/incognitocoded/town/main/loader.lua" 
 
 -- Проверка и запуск
 local success, result = pcall(function()
