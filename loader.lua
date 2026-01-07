@@ -1,16 +1,13 @@
--- [[ LOST HUB OFFICIAL LOADER ]] --
--- [[ TG/@losthubscript ]] --
+-- Замени ссылку ниже на ту, которую ты скопировал через кнопку Raw
+local raw_url = "https://raw.githubusercontent.com/incognitocoded/town/main/loader.lua" 
 
--- Замени эту ссылку на свою RAW ссылку с GitHub
-local my_github_url = "https://raw.githubusercontent.com/incognitocoded/town/main/loader.lua"
-
-local success, content = pcall(function()
-    return game:HttpGet(my_github_url)
+local success, result = pcall(function()
+    return game:HttpGet(raw_url)
 end)
 
 if success then
-    loadstring(content)()
+    print("LOST HUB: Скрипт успешно загружен!")
+    loadstring(result)() -- Это запустит твой GUI из облака
 else
-    -- Если ссылка битая или нет интернета, выдаст ошибку в консоль F9
-    warn("LOST HUB: Error connecting to GitHub!")
+    warn("Ошибка: Не удалось получить код с GitHub. Проверь ссылку!")
 end
